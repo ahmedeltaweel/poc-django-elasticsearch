@@ -1,0 +1,23 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AUTO COMPLETE</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'interface/style.css' %}">
+</head>
+<body>
+
+    <form method="POST">
+      <input type="hidden" id="Url" data-url="{% url 'interface:autocomplete' %}" />
+      <div class="autocomplete">
+        <input id="myInput" type="text" name="product-name" placeholder="Enter Product Name">
+      </div>
+      <div id="results"><ul id='nada'></ul></div>
+    </form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="{% static 'interface/scripts.js' %}"></script>
+
+</body>
+</html>
